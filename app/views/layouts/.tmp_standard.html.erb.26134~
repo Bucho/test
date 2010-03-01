@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Photo Share</title>
+		<%= stylesheet_link_tag 'application'%>
+		<%= stylesheet_link_tag 'photos'%>
+	</head>
+	<body>
+		<div> 
+		<p class="navbar">
+			&nbsp;
+			<%= link_to 'PHOTOS', :controller => :photos, :action => :index %>
+			&nbsp;
+			<%= link_to 'CATEGORIES', :controller => :categories, :action => :index %>
+			&nbsp;
+			<%= link_to 'SLIDESHOWS', :controller => :slideshows, :action => :index %>
+		</p>
+		</div> 
+		
+		<p style="color": green"><%= flash[:notice] %></p>
+		
+		<%= @content_for_layout %>
+		
+	</body>
+</html>

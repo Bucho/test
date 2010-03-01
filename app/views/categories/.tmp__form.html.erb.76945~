@@ -1,0 +1,8 @@
+<%= error_maessage_for 'categorty' %>
+
+<!--[formm:category]-->
+<p><label for="category_name">Name</label></br>
+<%= text_field 'category', 'neme' %></p>
+<p><label for="category_parent_id">Parent category</label></br>
+<%= collection_select(:category, :parent_id, @all_categories, :id, :long_name %></p>
+<!--[eoformm:category]-->
