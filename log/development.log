@@ -15173,3 +15173,117 @@ Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
   [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
   [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (171.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddPhotoColumns (20100226175415)
+  [4;35;1mSQL (625.0ms)[0m   [0mALTER TABLE `photos` DROP `created_at`[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mALTER TABLE `photos` DROP `thumbnail`[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mALTER TABLE `photos` DROP `description`[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100226175415'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mSHOW FIELDS FROM `categories_photos`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mdescribe `categories_photos`[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mSHOW KEYS FROM `categories_photos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mdescribe `photos`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW KEYS FROM `photos`[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mdescribe `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `slides`[0m
+  [4;36;1mSQL (79.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `slideshows`[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSHOW KEYS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhotos (20100124161917)
+Migrating to CreateSlideshows (20100225112640)
+Migrating to CreateSlides (20100225112900)
+Migrating to CreateCategories (20100225173044)
+Migrating to AddPhotoColumns (20100226175415)
+  [4;35;1mSQL (188.0ms)[0m   [0mALTER TABLE `photos` ADD `created_at` datetime[0m
+  [4;36;1mSQL (140.0ms)[0m   [0;1mALTER TABLE `photos` ADD `thumbnail` varchar(255)[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mALTER TABLE `photos` ADD `description` varchar(255)[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (63.0ms)[0m   [0mUPDATE `photos` SET `created_at` = '2010-03-02 19:24:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (15.0ms)[0m   [0;1mUPDATE `photos` SET `thumbnail` = 'balboa_park_m.jpg' WHERE `id` = 1[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.0ms)[0m   [0mUPDATE `photos` SET `created_at` = '2010-03-02 19:24:20' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (15.0ms)[0m   [0;1mUPDATE `photos` SET `thumbnail` = 'camel_m.jpg' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.0ms)[0m   [0mUPDATE `photos` SET `created_at` = '2010-03-02 19:24:20' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (0.0ms)[0m   [0;1mUPDATE `photos` SET `thumbnail` = 'cat_and_candels_m.jpg' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.0ms)[0m   [0mUPDATE `photos` SET `created_at` = '2010-03-02 19:24:20' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (0.0ms)[0m   [0;1mUPDATE `photos` SET `thumbnail` = 'hut_m.jpg' WHERE `id` = 4[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.0ms)[0m   [0mUPDATE `photos` SET `created_at` = '2010-03-02 19:24:20' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (0.0ms)[0m   [0;1mUPDATE `photos` SET `thumbnail` = 'mosaic_m.jpg' WHERE `id` = 5[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.0ms)[0m   [0mUPDATE `photos` SET `created_at` = '2010-03-02 19:24:20' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (0.0ms)[0m   [0;1mUPDATE `photos` SET `thumbnail` = 'polar_bear_m.jpg' WHERE `id` = 6[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.0ms)[0m   [0mUPDATE `photos` SET `created_at` = '2010-03-02 19:24:20' WHERE `id` = 7[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (0.0ms)[0m   [0;1mUPDATE `photos` SET `thumbnail` = 'police_m.jpg' WHERE `id` = 7[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.0ms)[0m   [0mUPDATE `photos` SET `created_at` = '2010-03-02 19:24:20' WHERE `id` = 8[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (0.0ms)[0m   [0;1mUPDATE `photos` SET `thumbnail` = 'sleeping_dog_m.jpg' WHERE `id` = 8[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.0ms)[0m   [0mUPDATE `photos` SET `created_at` = '2010-03-02 19:24:20' WHERE `id` = 9[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Update (0.0ms)[0m   [0;1mUPDATE `photos` SET `thumbnail` = 'stairs_m.jpg' WHERE `id` = 9[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100226175415')[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `categories_photos`[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mdescribe `categories_photos`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW KEYS FROM `categories_photos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mdescribe `photos`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW KEYS FROM `photos`[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mdescribe `slides`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW KEYS FROM `slides`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `slideshows`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW KEYS FROM `slideshows`[0m

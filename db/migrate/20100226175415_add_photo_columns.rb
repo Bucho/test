@@ -5,7 +5,7 @@ class AddPhotoColumns < ActiveRecord::Migration
     add_column :photos, :description, :string
       Photo.find(:all).each do |photo|
         photo.update_attribute :created_at, Time.now
-        photo.update_attribute :thumbnail, photo.filename.gsub('.','_m')
+        photo.update_attribute :thumbnail, photo.filename.gsub('.','_m.')
       end
     end
 
