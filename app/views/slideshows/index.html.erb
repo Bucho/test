@@ -5,22 +5,22 @@
 		<title>Slideshows controller</title>
 	</head>
 	<body>
-	<div id="rubyrails-summaries">
+	<div id="slideshow-summaries">
     <% for slideshow in @slideshows %>
-      <div id="rubyrails-summary">
+      <div id="slideshow-summary">
 		<div id='slideshow-caption'>
             <%= slideshow.name %>
             <small>(<%= slideshow.slides.size %> slides)</small>
       	</div>
 
-      <div id="rubyrails-thumbnails">
+      <div id="slideshow-thumbnails">
       	<%= thumbnail_tag slideshow.slides[0] %>
         <%= thumbnail_tag slideshow.slides[1] %>
         <%= thumbnail_tag slideshow.slides[2] %>
         &nbsp;<strong>. . .</strong>
         </div>
 
-      <div id="rubyrails-controls">
+      <div id="slideshow-controls">
       	<small>
       		<%= link_to 'Play',    :action => 'show',    :id => slideshow %>
             <%= link_to 'Edit',    :action => 'edit',    :id => slideshow %>

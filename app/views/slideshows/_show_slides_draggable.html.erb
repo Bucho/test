@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<ol id='sortable_thumbs'>
+			<% for slide in @slideshow.slides %>
+		    	<li id='thumbs_<%= slide.id %>' class='slides'>
+		    		<%= thumbnail_tag slide %>
+				</li>
+			<% end %>
+		</ol>
+
+        <%= sortable_element('sortable_thumbs', :url => {:action => 'update_slide_order'}) %>
+	</body>
+</html>
