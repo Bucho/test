@@ -15287,3 +15287,1541 @@ Migrating to AddPhotoColumns (20100226175415)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
   [4;35;1mSQL (15.0ms)[0m   [0mdescribe `slideshows`[0m
   [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW KEYS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-03-03 10:30:31) [GET]
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+Rendering template within layouts/standard
+Rendering photos/index
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 829ms (View: 689, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-03-03 10:30:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (31.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering photos/show
+Completed in 1891ms (View: 1813, DB: 61) | 200 OK [http://localhost/photos/1]
+  [4;36;1mSlideshow Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-03-03 10:30:48) [GET]
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` [0m
+Rendering template within layouts/standard
+Rendering photos/index
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 156ms (View: 93, DB: 32) | 200 OK [http://localhost/photos]
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 10:30:53) [GET]
+  [4;36;1mCategory Load (31.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/standard
+Rendering categories/index
+  [4;35;1mCategory Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Completed in 641ms (View: 516, DB: 47) | 200 OK [http://localhost/categories]
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 10:30:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/standard
+Rendering categories/edit
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+
+ActionView::TemplateError (undefined method `category_path' for #<ActionView::Base:0x46cbf0c>) on line #6 of app/views/categories/edit.html.erb:
+3: 	<title>Untitled Document</title>
+4: </head>
+5: <body>
+6: 	<% form_for @category do |category| %>
+7: 		<%= render :partial => "form", :locals => {:category => category} %>
+8: 	<% end %>
+9: </body>
+
+    app/views/categories/edit.html.erb:6
+
+Rendered rescues/_trace (281.0ms)
+Rendered rescues/_request_and_response (47.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 10:31:01) [GET]
+  [4;35;1mSlideshow Load (16.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Completed in 360ms (View: 266, DB: 63) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show (for 127.0.0.1 at 2010-03-03 10:31:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (15.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+Rendering template within layouts/standard
+Rendering slideshows/show
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+Rendered slideshows/_show_slide (62.0ms)
+Completed in 328ms (View: 141, DB: 77) | 200 OK [http://localhost/slideshows/show/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:31:15) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+Rendered slideshows/_show_slide (47.0ms)
+Completed in 172ms (View: 62, DB: 16) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:31:17) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Rendered slideshows/_show_slide (47.0ms)
+Completed in 531ms (View: 281, DB: 31) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;36;1mSlideshow Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:31:19) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+Rendered slideshows/_show_slide (63.0ms)
+Completed in 141ms (View: 16, DB: 47) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:31:21) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 125ms (View: 15, DB: 31) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:31:23) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+Rendered slideshows/_show_slide (47.0ms)
+Completed in 141ms (View: 31, DB: 31) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:31:25) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendered slideshows/_show_slide (47.0ms)
+Completed in 141ms (View: 15, DB: 63) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 10:31:27) [GET]
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;36;1mSlide Load (16.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Completed in 1687ms (View: 1187, DB: 63) | 200 OK [http://localhost/slideshows]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:31:30) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendered slideshows/_show_slide (187.0ms)
+Completed in 656ms (View: 188, DB: 47) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 10:31:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendered slideshows/_show_slides_draggable (360.0ms)
+Rendered slideshows/_form (32.0ms)
+Completed in 656ms (View: 531, DB: 62) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 10:31:46) [GET]
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;35;1mSlideshow Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;36;1mSlide Load (16.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Completed in 250ms (View: 94, DB: 125) | 200 OK [http://localhost/slideshows]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#destroy (for 127.0.0.1 at 2010-03-03 10:31:50) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to destroy. Actions: edit, index, show, show_slide, and update_slide_order):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 10:31:56) [GET]
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Completed in 250ms (View: 156, DB: 47) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 10:40:09) [GET]
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Completed in 5078ms (View: 3298, DB: 46) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-03-03 10:40:25) [GET]
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` [0m
+Rendering template within layouts/standard
+Rendering photos/index
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 1203ms (View: 1000, DB: 31) | 200 OK [http://localhost/photos]
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-03-03 10:40:40) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendering template within layouts/standard
+Rendering photos/show
+Completed in 4515ms (View: 4390, DB: 0) | 200 OK [http://localhost/photos/6]
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-03-03 10:40:47) [GET]
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+Rendering template within layouts/standard
+Rendering photos/index
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 188ms (View: 125, DB: 16) | 200 OK [http://localhost/photos]
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 10:40:50) [GET]
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Completed in 234ms (View: 141, DB: 62) | 200 OK [http://localhost/slideshows]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show (for 127.0.0.1 at 2010-03-03 10:40:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+Rendering template within layouts/standard
+Rendering slideshows/show
+  [4;35;1mSlide Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+Rendered slideshows/_show_slide (62.0ms)
+Completed in 203ms (View: 62, DB: 63) | 200 OK [http://localhost/slideshows/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:40:57) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+Rendered slideshows/_show_slide (32.0ms)
+Completed in 125ms (View: 15, DB: 32) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:40:59) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 109ms (View: 31, DB: 16) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:41:01) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+Rendered slideshows/_show_slide (47.0ms)
+Completed in 109ms (View: 16, DB: 31) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 10:41:03) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 125ms (View: 31, DB: 31) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 10:41:04) [GET]
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (16.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Completed in 282ms (View: 156, DB: 63) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 10:41:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (16.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (266.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendered slideshows/_show_slides_draggable (562.0ms)
+Rendered slideshows/_form (16.0ms)
+Completed in 750ms (View: 357, DB: 361) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#update (for 127.0.0.1 at 2010-03-03 10:42:07) [POST]
+  Parameters: {"commit"=>"Save Attributes", "slideshow"=>{"name"=>"Pictures"}, "authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"1"}
+
+ActionController::UnknownAction (No action responded to update. Actions: edit, index, show, show_slide, and update_slide_order):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-03-03 17:45:35) [GET]
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` [0m
+Rendering template within layouts/standard
+Rendering photos/index
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 656ms (View: 516, DB: 31) | 200 OK [http://localhost/photos]
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (172.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 17:55:01) [GET]
+  [4;36;1mSlideshow Load (328.0ms)[0m   [0;1mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;35;1mSlideshow Columns (422.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mPhoto Columns (32.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (31.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Completed in 3796ms (View: 2342, DB: 1126) | 200 OK [http://localhost/slideshows]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 17:55:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSlideshow Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendered slideshows/_show_slides_draggable (266.0ms)
+
+ActionView::TemplateError (Missing template slideshows/_photo_picker.erb in view path app/views) on line #18 of app/views/slideshows/edit.html.erb:
+15:   <div id='slideshow-photo-picker'>
+16:     <p style='text-align: center;'><b>Unused Photos</b></p>
+17:     <div id='slideshow-photos'>
+18:       <%= render :partial => 'photo_picker' %>
+19:     </div>
+20:   </div>
+21: 
+
+    app/views/slideshows/edit.html.erb:18
+
+Rendered rescues/_trace (422.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 18:23:27) [GET]
+  [4;35;1mSlideshow Load (109.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (63.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Completed in 438ms (View: 140, DB: 282) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:23:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (78.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (94.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (31.0ms)
+Rendered slideshows/_photo_picker (16.0ms)
+
+ActionView::TemplateError (undefined method `start_form_tag' for #<ActionView::Base:0x4813cfc>) on line #26 of app/views/slideshows/edit.html.erb:
+23:     <p><%= link_to 'Play this Slideshow', :action => 'show', :id => @slideshow %></p>
+24:     <div style='border: thin solid; padding-left: 1em;'>
+25:     <p style='text-align: center;'><b>Attributes</b></p>
+26:       <%= start_form_tag :action => 'update', :id => @slideshow %>
+27:         <%= render :partial => 'form' %>
+28:         <%= submit_tag 'Save Attributes' %>
+29:       <%= end_form_tag %>
+
+    app/views/slideshows/edit.html.erb:26
+
+Rendered rescues/_trace (422.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:24:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (16.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (31.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Rendered slideshows/_form (15.0ms)
+
+ActionView::TemplateError (undefined local variable or method `end_form_tag' for #<ActionView::Base:0x47c956c>) on line #29 of app/views/slideshows/edit.html.erb:
+26:       <%= form_tag :action => 'update', :id => @slideshow %>
+27:         <%= render :partial => 'form' %>
+28:         <%= submit_tag 'Save Attributes' %>
+29:       <%= end_form_tag %>
+30:     </div>
+31:     <p>
+32:     <b>Hint:</b> Drag and drop photos between the
+
+    app/views/slideshows/edit.html.erb:29
+
+Rendered rescues/_trace (1125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:24:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (15.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+
+ActionView::TemplateError (undefined method `start_form_tag' for #<ActionView::Base:0x47cab24>) on line #26 of app/views/slideshows/edit.html.erb:
+23:     <p><%= link_to 'Play this Slideshow', :action => 'show', :id => @slideshow %></p>
+24:     <div style='border: thin solid; padding-left: 1em;'>
+25:     <p style='text-align: center;'><b>Attributes</b></p>
+26:       <%= start_form_tag :action => 'update', :id => @slideshow %>
+27:         <%= render :partial => 'form' %>
+28:         <%= submit_tag 'Save Attributes' %>
+29:       <%= end_form_tag %>
+
+    app/views/slideshows/edit.html.erb:26
+
+Rendered rescues/_trace (1500.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:29:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (813.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (187.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (62.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (78.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+
+ActionView::TemplateError (undefined method `start_form' for #<ActionView::Base:0x47e60a4>) on line #26 of app/views/slideshows/edit.html.erb:
+23:     <p><%= link_to 'Play this Slideshow', :action => 'show', :id => @slideshow %></p>
+24:     <div style='border: thin solid; padding-left: 1em;'>
+25:     <p style='text-align: center;'><b>Attributes</b></p>
+26:       <%= start_form :action => 'update', :id => @slideshow %>
+27:         <%= render :partial => 'form' %>
+28:         <%= submit_tag 'Save Attributes' %>
+29:       <%= end_form_tag %>
+
+    app/views/slideshows/edit.html.erb:26
+
+Rendered rescues/_trace (1391.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:30:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (16.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 313ms (View: 125, DB: 79) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#remove_slide (for 127.0.0.1 at 2010-03-03 18:30:45) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"thumbs_3"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Delete all (469.0ms)[0m   [0;1mDELETE FROM `slides` WHERE (`id` IN ('3')) [0m
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+
+NoMethodError (undefined method `render_partial' for #<SlideshowsController:0x475d0c4>):
+  app/controllers/slideshows_controller.rb:48:in `remove_slide'
+
+Rendered rescues/_trace (515.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#remove_slide (for 127.0.0.1 at 2010-03-03 18:30:47) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"thumbs_3"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Delete all (16.0ms)[0m   [0;1mDELETE FROM `slides` WHERE (`id` IN ('3')) [0m
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (32.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+
+NoMethodError (undefined method `render_partial' for #<SlideshowsController:0x48099dc>):
+  app/controllers/slideshows_controller.rb:48:in `remove_slide'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 18:30:51) [GET]
+  [4;35;1mSlideshow Load (15.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+Completed in 313ms (View: 110, DB: 140) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:30:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 6) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (15.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 406ms (View: 47, DB: 31) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#remove_slide (for 127.0.0.1 at 2010-03-03 18:30:58) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"thumbs_6"}
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Delete all (15.0ms)[0m   [0mDELETE FROM `slides` WHERE (`id` IN ('6')) [0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+
+NoMethodError (undefined method `render_partial' for #<SlideshowsController:0x47d1cf8>):
+  app/controllers/slideshows_controller.rb:48:in `remove_slide'
+
+Rendered rescues/_trace (219.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 18:31:01) [GET]
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+Completed in 156ms (View: 63, DB: 62) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:31:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (15.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (0.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 188ms (View: 47, DB: 62) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#add_photo (for 127.0.0.1 at 2010-03-03 18:31:09) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"photo_6"}
+
+ActionController::UnknownAction (No action responded to add_photo. Actions: edit, index, remove_slide, show, show_slide, unused_photos, and update_slide_order):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:31:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (15.0ms)
+Rendered slideshows/_photo_picker (16.0ms)
+Completed in 172ms (View: 31, DB: 62) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#add_photo (for 127.0.0.1 at 2010-03-03 18:31:15) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"photo_6"}
+
+ActionController::UnknownAction (No action responded to add_photo. Actions: edit, index, remove_slide, show, show_slide, unused_photos, and update_slide_order):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 18:31:17) [GET]
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+Completed in 156ms (View: 93, DB: 32) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:31:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (15.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 203ms (View: 47, DB: 78) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#remove_slide (for 127.0.0.1 at 2010-03-03 18:31:22) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"thumbs_2"}
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Delete all (47.0ms)[0m   [0;1mDELETE FROM `slides` WHERE (`id` IN ('2')) [0m
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+
+NoMethodError (undefined method `render_partial' for #<SlideshowsController:0x470c0ac>):
+  app/controllers/slideshows_controller.rb:48:in `remove_slide'
+
+Rendered rescues/_trace (437.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#update_slide_order (for 127.0.0.1 at 2010-03-03 18:31:23) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "sortable_thumbs"=>["4", "2", "5", "7", "8", "9", "1"]}
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.`id` = 4) [0m
+  [4;35;1mSQL (32.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSlide Update (31.0ms)[0m   [0;1mUPDATE `slides` SET `position` = 0 WHERE `id` = 4[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSlide Load (16.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.`id` = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Slide with ID=2):
+  app/controllers/slideshows_controller.rb:37:in `update_slide_order'
+  app/controllers/slideshows_controller.rb:36:in `each'
+  app/controllers/slideshows_controller.rb:36:in `each_with_index'
+  app/controllers/slideshows_controller.rb:36:in `update_slide_order'
+
+Rendered rescues/_trace (1078.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSlideshow Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#add_photo (for 127.0.0.1 at 2010-03-03 18:31:25) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"photo_6"}
+
+ActionController::UnknownAction (No action responded to add_photo. Actions: edit, index, remove_slide, show, show_slide, unused_photos, and update_slide_order):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 18:31:29) [GET]
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+Completed in 156ms (View: 93, DB: 32) | 200 OK [http://localhost/slideshows]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:31:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (63.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (16.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 234ms (View: 47, DB: 94) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#add_photo (for 127.0.0.1 at 2010-03-03 18:31:35) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"photo_6"}
+
+ActionController::UnknownAction (No action responded to add_photo. Actions: edit, index, remove_slide, show, show_slide, unused_photos, and update_slide_order):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 18:31:43) [GET]
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+Completed in 172ms (View: 93, DB: 48) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:31:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (15.0ms)
+Rendered slideshows/_photo_picker (16.0ms)
+Completed in 359ms (View: 46, DB: 62) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:37:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSlideshow Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlideshow Load (16.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (16.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 188ms (View: 47, DB: 32) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:37:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (0.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 187ms (View: 46, DB: 48) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 18:37:27) [GET]
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+Completed in 156ms (View: 94, DB: 47) | 200 OK [http://localhost/slideshows]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show (for 127.0.0.1 at 2010-03-03 18:37:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSlideshow Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mSlide Load (15.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+Rendering template within layouts/standard
+Rendering slideshows/show
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 156ms (View: 63, DB: 45) | 200 OK [http://localhost/slideshows/show/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 18:37:33) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 18:37:35) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mSlide Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 93ms (View: 31, DB: 16) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 18:37:37) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 18:37:39) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 78ms (View: 0, DB: 31) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 18:37:41) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 93ms (View: 31, DB: 16) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 18:37:43) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Rendered slideshows/_show_slide (16.0ms)
+Completed in 63ms (View: 0, DB: 16) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 18:37:44) [GET]
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+Completed in 156ms (View: 125, DB: 15) | 200 OK [http://localhost/slideshows]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 18:37:45) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Rendered slideshows/_show_slide (47.0ms)
+Completed in 313ms (View: 62, DB: 16) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:37:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlideshow Load (31.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (15.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 359ms (View: 31, DB: 78) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#add_photo (for 127.0.0.1 at 2010-03-03 18:37:51) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"photo_3"}
+
+ActionController::UnknownAction (No action responded to add_photo. Actions: edit, index, remove_slide, show, show_slide, unused_photos, and update_slide_order):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSlideshow Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show (for 127.0.0.1 at 2010-03-03 18:38:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+Rendering template within layouts/standard
+Rendering slideshows/show
+  [4;36;1mSlide Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 125ms (View: 47, DB: 30) | 200 OK [http://localhost/slideshows/show/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#show_slide (for 127.0.0.1 at 2010-03-03 18:38:11) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo="}
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+Rendered slideshows/_show_slide (31.0ms)
+Completed in 94ms (View: 16, DB: 31) | 200 OK [http://localhost/slideshows/show_slide]
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#index (for 127.0.0.1 at 2010-03-03 18:38:12) [GET]
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` LIMIT 0, 2[0m
+Rendering template within layouts/standard
+Rendering slideshows/index
+  [4;36;1mSlideshow Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `slides` WHERE (`slides`.slideshow_id = 1) [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+Completed in 360ms (View: 312, DB: 32) | 200 OK [http://localhost/slideshows]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:38:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (0.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (15.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 172ms (View: 47, DB: 31) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:40:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSlideshow Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (15.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (0.0ms)
+Rendered slideshows/_photo_picker (16.0ms)
+
+ActionView::TemplateError (undefined method `start_form_tag' for #<ActionView::Base:0x476a260>) on line #26 of app/views/slideshows/edit.html.erb:
+23:     <p><%= link_to 'Play this Slideshow', :action => 'show', :id => @slideshow %></p>
+24:     <div style='border: thin solid; padding-left: 1em;'>
+25:     <p style='text-align: center;'><b>Attributes</b></p>
+26:       <%= start_form_tag :action => 'update', :id => @slideshow %>
+27:       <%= render :partial => 'form' %>
+28:       <%= submit_tag 'Save Attributes' %>
+29:     <%= end_form_tag %>
+
+    app/views/slideshows/edit.html.erb:26
+
+Rendered rescues/_trace (500.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:41:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (16.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (15.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;36;1mPhoto Load (16.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (16.0ms)
+Rendered slideshows/_photo_picker (0.0ms)
+Completed in 343ms (View: 187, DB: 94) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#add_photo (for 127.0.0.1 at 2010-03-03 18:41:27) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"photo_6"}
+
+ActionController::UnknownAction (No action responded to add_photo. Actions: edit, index, remove_slide, show, show_slide, unused_photos, and update_slide_order):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSlideshow Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:48:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSlideshow Columns (109.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlideshow Load (0.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mPhoto Load (63.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mSlide Load (31.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (0.0ms)
+Rendered slideshows/_photo_picker (15.0ms)
+
+ActionView::TemplateError (undefined method `start_form_tag' for #<ActionView::Base:0x4659844>) on line #26 of app/views/slideshows/edit.html.erb:
+23:     <p><%= link_to 'Play this Slideshow', :action => 'show', :id => @slideshow %></p>
+24:     <div style='border: thin solid; padding-left: 1em;'>
+25:     <p style='text-align: center;'><b>Attributes</b></p>
+26:       <%= start_form_tag :action => 'update', :id => @slideshow %>
+27:       <%= render :partial => 'form' %>
+28:       <%= submit_tag 'Save Attributes' %>
+29:       <%= end_form_tag %>
+
+    app/views/slideshows/edit.html.erb:26
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (31.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:48:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSlideshow Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `slideshows`[0m
+  [4;36;1mSlideshow Load (15.0ms)[0m   [0;1mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;35;1mPhoto Load (16.0ms)[0m   [0mSELECT * FROM `photos` [0m
+  [4;36;1mSlide Load (0.0ms)[0m   [0;1mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;35;1mSlide Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (0.0ms)
+Rendered slideshows/_photo_picker (15.0ms)
+Completed in 391ms (View: 78, DB: 62) | 200 OK [http://localhost/slideshows/edit/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#add_photo (for 127.0.0.1 at 2010-03-03 18:48:50) [POST]
+  Parameters: {"authenticity_token"=>"LqAyQRU7GTKdXjPAamPy6aOPDTzgTGrYAND5rYdkVJo=", "id"=>"photo_3"}
+
+ActionController::UnknownAction (No action responded to add_photo. Actions: edit, index, remove_slide, show, show_slide, unused_photos, and update_slide_order):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSlideshow Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlide Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `slides`[0m
+  [4;36;1mPhoto Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SlideshowsController#edit (for 127.0.0.1 at 2010-03-03 18:54:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSlideshow Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `slideshows`[0m
+  [4;35;1mSlideshow Load (15.0ms)[0m   [0mSELECT * FROM `slideshows` WHERE (`slideshows`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` [0m
+  [4;35;1mSlide Load (0.0ms)[0m   [0mSELECT * FROM `slides` WHERE (`slides`.slideshow_id = 1) ORDER BY position[0m
+  [4;36;1mSlide Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `slides`[0m
+  [4;35;1mPhoto Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 7) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 8) [0m
+  [4;36;1mPhoto Load (0.0ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 9) [0m
+  [4;35;1mPhoto Load (0.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/standard
+Rendering slideshows/edit
+Rendered slideshows/_show_slides_draggable (0.0ms)
+Rendered slideshows/_photo_picker (16.0ms)
+Completed in 250ms (View: 63, DB: 46) | 200 OK [http://localhost/slideshows/edit/1]

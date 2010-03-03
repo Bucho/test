@@ -66,5 +66,40 @@
    padding-top: 1.5em;
 }
 
+#slideshow-photo-picker {
+   float: left;
+   width: 10em;
+   text-align: center;
+   border-right: thin solid #bbb;
+   padding: 0.50em;
+   padding-bottom: 10em;
+}
+
+img.thumbnail {
+   border: 2px solid black;
+   margin-bottom: 1em;
+}
+
+img.photos {
+   border: 2px solid black;
+   margin-bottom: 1em;
+}
+
+#slideshow-contents {
+   float: left;
+   width: 11em;
+   padding: 0.50em;
+   text-align: center;
+   border-right: thin solid #bbb;
+   padding: 0.50em;
+   padding-bottom: 10em;
+}
+
+#slideshow-attributes {
+   margin-left: 23em;
+   padding-left: 1.5em;
+   padding-top: 1.5em;
+}
+
 
 
