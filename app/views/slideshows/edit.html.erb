@@ -21,6 +21,15 @@
 	
 		<div id='slideshow-attributes'>
 			<p><%= link_to 'Play this Slideshow', :action => 'show', :id => @slideshow %></p>
+			<p>
+			<label for="category_id">Filter "Unused Photos" on this Category</label><br>
+			<%= collection_select(:category, :id, @all_categories, :id, :long_name) %>
+			<%= observe_field(:category_id,
+							:frequency => 2.0,
+							:update => 'slideshow-photos',
+							:url => {:action => 'change_filter'},
+							:with => 'category_id') %>
+			</p>
 			<div style='border: thin solid; padding-left: 1em;'>
 				<p style='text-align: center;'><b>Attributes</b></p>
 				<% form_for(@slideshow, :url => slideshow_path(@slideshow), :method => :put) do |f| %>
