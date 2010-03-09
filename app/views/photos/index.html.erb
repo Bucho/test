@@ -20,9 +20,10 @@
 			</td>
 			<td>
 				<%=h photo.filename %>
-				</br>
+				<br>
 				<%= link_to 'delete me', { :action => 'destroy', :id => photo },
 			   							   :confirm => 'Are you sure?' %>
+				<td><%= link_to 'right_working_destroy', photo_path(photo), :method => :delete, :confirm => 'Are you sure?' %></td>
 			</td>
 		</tr>
 		<% end %>

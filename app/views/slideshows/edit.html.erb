@@ -5,52 +5,53 @@
 	</head>
 	<body>
 		<h1>Editing slideshow</h1>
-  <div id='slideshow-contents'>
-    <p style='text-align: center;'><b>Slideshow Photos</b></p>
-    <div id='slideshow-thumbs'>
-      <%= render :partial => 'show_slides_draggable' %>
-    </div>
-  </div>
-  
-  <div id='slideshow-photo-picker'>
-    <p style='text-align: center;'><b>Unused Photos</b></p>
-    <div id='slideshow-photos'>
-      <%= render :partial => 'photo_picker' %>
-    </div>
-  </div>
-
-  <div id='slideshow-attributes'>
-    <p><%= link_to 'Play this Slideshow', :action => 'show', :id => @slideshow %></p>
-    <div style='border: thin solid; padding-left: 1em;'>
-    <p style='text-align: center;'><b>Attributes</b></p>
-      
-	  
-
-    </div>
-    <p>
-    <b>Hint:</b> Drag and drop photos between the
-    two lists to add and remove photos from the
-    slideshow. Drag photos within the slideshow to
-    rearrange their order.
-    </p>
-  </div>
-
-  <%= drop_receiving_element("slideshow-contents",
-          :update => "slideshow-thumbs",
-          :url => {:action => "add_photo" },
-          :accept => "photos",
-          :droponempty => "true",
-          :loading => visual_effect(:fade),
-          :complete => visual_effect(:highlight, 'sortable_thumbs')
-          ) %>
-		  
-  <%= drop_receiving_element("slideshow-photo-picker",
-          :update => "slideshow-photos",
-          :url => {:action => "remove_slide" },
-          :accept => "slides",
-          :droponempty => "true",
-          :loading => visual_effect(:fade),
-          :complete => visual_effect(:highlight, 'slideshow-photos')
-          ) %>		  
+		<div id='slideshow-contents'>
+			<p style='text-align: center;'><b>Slideshow Photos</b></p>
+			<div id='slideshow-thumbs'>
+				<%= render :partial => 'show_slides_draggable' %>
+			</div>
+		</div>
+	
+		<div id='slideshow-photo-picker'>
+			<p style='text-align: center;'><b>Unused Photos</b></p>
+			<div id='slideshow-photos'>
+				<%= render :partial => 'photo_picker' %>
+			</div>
+		</div>
+	
+		<div id='slideshow-attributes'>
+			<p><%= link_to 'Play this Slideshow', :action => 'show', :id => @slideshow %></p>
+			<div style='border: thin solid; padding-left: 1em;'>
+				<p style='text-align: center;'><b>Attributes</b></p>
+				<% form_for(@slideshow, :url => slideshow_path(@slideshow), :method => :put) do |f| %>
+					<%= render :partial => "form", :locals => {:f => f} %>
+					<%= submit_tag "Save attributes" %>
+				<% end %>
+			</div>
+			<p>
+			<b>Hint:</b> Drag and drop photos between the
+			two lists to add and remove photos from the
+			slideshow. Drag photos within the slideshow to
+			rearrange their order.
+			</p>
+		</div>
+	
+		<%= drop_receiving_element("slideshow-contents",
+	          :update => "slideshow-thumbs",
+	          :url => {:action => "add_photo" },
+	          :accept => "photos",
+	          :droponempty => "true",
+	          :loading => visual_effect(:fade),
+	          :complete => visual_effect(:highlight, 'sortable_thumbs')
+	          ) %>
+	
+		<%= drop_receiving_element("slideshow-photo-picker",
+	          :update => "slideshow-photos",
+	          :url => {:action => "remove_slide" },
+	          :accept => "slides",
+	          :droponempty => "true",
+	          :loading => visual_effect(:fade),
+	          :complete => visual_effect(:highlight, 'slideshow-photos')
+	          ) %>
 	</body>
 </html>

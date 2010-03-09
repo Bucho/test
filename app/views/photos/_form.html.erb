@@ -1,22 +1,18 @@
-<%= error_message_for 'photo' %>
+<p><%= f.label :created_at, 'Created at' %><br>
+<%= f.datetime_select :created_at %></p>
 
-<p> <label for = "photo_created_at"> Created at </label> </br>
-<%= datetime_select 'photo', 'created_at' %> </p>
+<p><%= f.label :filename, 'File name' %><br>
+<%= f.text_field :filename %></p>
 
-<p> <label for = "photo_filenames"> Filename </label> </br>
-<%= text_field 'photo', 'filename' %> </p>
+<p><%= f.label :thumbnail, 'Thumbnail' %><br>
+<%= f.text_field :thumbnail %></p>
 
-<p> <label for = "photo_thumbnail"> Thumbnail </label> </br>
-<%= text_field 'photo', 'thumbnaul' %> </p>
-
-<p> <label for = "photo_description"> Description </label> </br>
-<%= text_field 'photo', 'description' %> </p>
+<p><%= f.label :description, 'Description' %><br>
+<%= f.text_field :description %></p>
 
 <p>
-  <label for="categories">Categories:</label><br/>
-  <select id="categories" name="categories[]" multiple="multiple" size="10" style="width:250px;">
-  <%= options_from_collection_for_select(@all_categories, :id, :long_name, @selected) %>
-  </select>
+	<%= f.label :categories, 'Categories:' %><br>
+	<select id="categories" name="categories[]" multiple="multiple" size="10" style="width:250px;">
+	<%= options_from_collection_for_select(@all_categories, :id, :long_name, @selected) %>
+	</select>	
 </p>
-
-

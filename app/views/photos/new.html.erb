@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>New Photo</title>
+	</head>
+	<body>
+		<h1>New photo</h1>
+		<% form_for :photo, :url => photos_path do |f| %>
+			<%= render :partial => "form", :locals => {:f => f} %>
+			<%= submit_tag "Create" %>
+		<% end %>
+		
+		<%= link_to 'Back', photos_path %>
+	</body>
+</html>

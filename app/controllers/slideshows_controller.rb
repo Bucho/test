@@ -45,12 +45,12 @@ class SlideshowsController < ApplicationController
     @slideshow = Slideshow.find(slideshow_id)
     session[:slideshow] = @slideshow
     @photos = unused_photos(@slideshow)
-    render_partial 'photo_picker'
+    render :partial => "photo_picker"
   end
   
   def update_slide_order
     params[:sortable_thumbs].each_with_index do |id, position|
-       Slide.update(id, :position => position)
+      Slide.update(id, :position => position)
     end
   end
   
@@ -61,7 +61,7 @@ class SlideshowsController < ApplicationController
     if @slide == nil
       session[:slide_index] = 0
       @slide = @slideshow.slides[0]
-  end
-      render :partial => "show_slide"
+    end
+    render :partial => "show_slide"
   end 
 end

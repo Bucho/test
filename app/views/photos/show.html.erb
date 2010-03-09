@@ -6,9 +6,9 @@
 	<body>
 		<%= image_tag @photo.filename %>
 		<% for column in Photo.content_columns %>
-		<p>
+			<p>
 			<b><%= column.human_name %></b> <%=h @photo.send(column.name) %>
-		</p>
+			</p>
 		<% end %>
 		
 		<%= link_to 'Edit', :action => :edit, :id => @photo %>

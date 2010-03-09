@@ -1,3 +1,6 @@
-<p><label for="slideshow_name">Name</label></br>
-<%= text_field 'slideshow', 'name' %></p>
+<p><%= f.label :name, 'Name' %><br>
+<%= f.text_field :name %></p>
+
+<p><%= f.label :created_at, 'Created at' %><br>
+<%= f.datetime_select :created_at %></p>
 
